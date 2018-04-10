@@ -1,0 +1,77 @@
+<div class="text-white bg-primary px-1 mat-elevation-z2 w-100">
+  <div class="font-weight-bold text-xl py-2">
+    <span class="px-2">Information</span>
+    <button class="position-fixed" (click)="toggleSidenavMain.emit()" mat-icon-button style="top:0px; right:0px">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>
+<div class="container-fluid py-2">
+  <app-analog-clock></app-analog-clock>
+</div>
+<div class="py-0" style="width:300px">
+  <mat-accordion>
+    <mat-expansion-panel class="row mat-elevation-z0 px-0 mb-2">
+      <mat-expansion-panel-header class="col-12 h-50 px-2 py-1">
+        <mat-panel-title class="font-weght-bold text-dark">
+          Operator Instructions
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <pre>
+
+  1._LOGIN_IN_CONCERT_CLIENT
+  2._DIRECT_JOURNEY_RESERVATION─FORM_1
+  3._RESERVATION_ON_CONCESSIONS─FORM_2
+  4._CANCELLATION─FORM_5
+  5._MODIFICATION─FORM_6
+  6._CURRENT_RESERVATION─FORM_10
+  7._MCP_─_ENQUIRES
+  8._MCP_─_SPECIAL_FUNCTIONS_MENU
+  9._MCP_─_LOGOUT
+      </pre>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-accordion>
+    <mat-expansion-panel [expanded]="true" class="row mat-elevation-z0 px-0 mb-2">
+      <mat-expansion-panel-header class="col-12 h-50 px-2 py-1">
+        <mat-panel-title class="font-weght-bold text-dark">
+          User Details
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="text-dark px-0 py-2 col-12">
+        <div class="row col-12 mb-1">
+          <div class="col-7 bg-secondary-light py-1">Terminal Type: </div>
+          <div class="col-5 py-1 text-primary font-weight-bold">Standard</div>
+        </div>
+        <div class="row col-12 mb-1 py-1">
+          <div class="col-7 bg-secondary-light py-1">User Type: </div>
+          <div class="col-5 py-1 text-primary font-weight-bold">Supervisor</div>
+        </div>
+        <div class="row col-12 mb-1 py-1">
+          <div class="col-7 bg-secondary-light py-1">Printer Type: </div>
+          <div class="col-5 py-1 text-primary font-weight-bold">Epson</div>
+        </div>
+        <div class="row col-12 mb-1 py-1">
+          <div class="col-7 bg-secondary-light py-1">Terminal ID: </div>
+          <div class="col-5 py-1 text-primary font-weight-bold">FSK1</div>
+        </div>
+        <div class="row col-12 mb-1 py-1">
+          <div class="col-7 bg-secondary-light py-1">Payment Mode: </div>
+          <div class="col-5 py-1 text-primary font-weight-bold">CASH/CARD</div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<mat-divider></mat-divider>
+<button mat-button color="primary" class="col-12 w-100">Change Password</button>
+<mat-divider></mat-divider>
+<button mat-button color="primary" class="col-12 w-100">Change Stockroll</button>
+<mat-divider></mat-divider>
+<button [routerLink]="['/my/dtc_txn']" mat-button color="primary" class="col-12 w-100">Transaction History</button>
+<mat-divider></mat-divider>
+<button mat-button color="primary" class="col-12 w-100">User Feedback</button>
+<mat-divider></mat-divider>
+<button (click)="logOut.emit()" mat-button color="primary" class="col-12 w-100">Logout</button>
+<mat-divider></mat-divider>

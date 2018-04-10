@@ -1,0 +1,167 @@
+[
+  {
+    "trainNumber": 12172 ,
+    "trainName": "HW LTT AC SF",
+    "fromStnCode": "NZM",
+    "departureTime":"00:10",
+    "toStnCode": "MKP",
+    "arrivalTime":"06:15",
+    "duration" : "14h 35m",
+		"days":["--","--","W","--","--","S","--"],
+    "avlClasses": ["1A","2A","3A"]
+  },
+  {
+    "trainNumber": 18238,
+    "trainName": "CHHATISGARH EXP",
+    "fromStnCode": "NZM",
+    "departureTime":"04:30",
+    "toStnCode": "JHS",
+    "arrivalTime":"13:10",
+    "duration" : "14h 35m",
+		"days":["M","T","W","T","F","S","S"],
+    "avlClasses": ["1A","2A","3A","SL"]
+  },
+  {
+    "trainNumber": 12138,
+    "trainName": "PUNJAB MAIL",
+    "fromStnCode": "NZM",
+    "departureTime":"05:15",
+    "toStnCode": "JHS",
+    "arrivalTime":"12:25",
+    "duration" : "14h 35m",
+		"days":["M","T","W","T","F","S","S"],
+    "avlClasses": ["1A","2A","3A","SL"]
+  },
+  {
+    "trainNumber": 12650,
+    "trainName": "KTK SMPRK K EXP",
+    "fromStnCode": "NZM",
+    "departureTime":"06:25",
+    "toStnCode": "JHS",
+    "arrivalTime":"12:05",
+    "duration" : "14h 35m",
+		"days":["M","T","--","T","--","S","S"],
+    "avlClasses": ["1A","2A","3A","SL"]
+  },
+  {
+    "trainNumber": 12280,
+    "trainName": "TAJ EXPRESS",
+    "fromStnCode": "NZM",
+    "departureTime":"07:00",
+    "toStnCode": "JHS",
+    "arrivalTime":"14:10",
+    "duration" : "14h 35m",
+		"days":["M","--","--","--","--","S","--"],
+    "avlClasses": ["CC","2S"]
+  },
+  {
+    "trainNumber": 12172 ,
+    "trainName": "HW LTT AC SF",
+    "fromStnCode": "NZM",
+    "departureTime":"00:10",
+    "toStnCode": "MKP",
+    "arrivalTime":"06:15",
+    "duration" : "14h 35m",
+		"days":["--","--","W","--","--","S","--"],
+    "avlClasses": ["1A","2A","3A"]
+  },
+  {
+    "trainNumber": 18238,
+    "trainName": "CHHATISGARH EXP",
+    "fromStnCode": "NZM",
+    "departureTime":"04:30",
+    "toStnCode": "JHS",
+    "arrivalTime":"13:10",
+    "duration" : "14h 35m",
+		"days":["M","T","W","T","F","S","S"],
+    "avlClasses": ["1A","2A","3A","SL"]
+  },
+  {
+    "trainNumber": 12138,
+    "trainName": "PUNJAB MAIL",
+    "fromStnCode": "NZM",
+    "departureTime":"05:15",
+    "toStnCode": "JHS",
+    "arrivalTime":"12:25",
+    "duration" : "14h 35m",
+		"days":["M","T","W","T","F","S","S"],
+    "avlClasses": ["1A","2A","3A","SL"]
+  },
+  {
+    "trainNumber": 12650,
+    "trainName": "KTK SMPRK K EXP",
+    "fromStnCode": "NZM",
+    "departureTime":"06:25",
+    "toStnCode": "JHS",
+    "arrivalTime":"12:05",
+    "duration" : "14h 35m",
+		"days":["M","T","--","T","--","S","S"],
+    "avlClasses": ["1A","2A","3A","SL"]
+  },
+  {
+    "trainNumber": 12280,
+    "trainName": "TAJ EXPRESS",
+    "fromStnCode": "NZM",
+    "departureTime":"07:00",
+    "toStnCode": "JHS",
+    "arrivalTime":"14:10",
+    "duration" : "14h 35m",
+		"days":["M","--","--","--","--","S","--"],
+    "avlClasses": ["CC","2S"]
+  },
+  {
+    "trainNumber": 12172 ,
+    "trainName": "HW LTT AC SF",
+    "fromStnCode": "NZM",
+    "departureTime":"00:10",
+    "toStnCode": "MKP",
+    "arrivalTime":"06:15",
+    "duration" : "14h 35m",
+		"days":["--","--","W","--","--","S","--"],
+    "avlClasses": ["1A","2A","3A"]
+  },
+  {
+    "trainNumber": 18238,
+    "trainName": "CHHATISGARH EXP",
+    "fromStnCode": "NZM",
+    "departureTime":"04:30",
+    "toStnCode": "JHS",
+    "arrivalTime":"13:10",
+    "duration" : "14h 35m",
+		"days":["M","T","W","T","F","S","S"],
+    "avlClasses": ["1A","2A","3A","SL"]
+  },
+  {
+    "trainNumber": 12138,
+    "trainName": "PUNJAB MAIL",
+    "fromStnCode": "NZM",
+    "departureTime":"05:15",
+    "toStnCode": "JHS",
+    "arrivalTime":"12:25",
+    "duration" : "14h 35m",
+		"days":["M","T","W","T","F","S","S"],
+    "avlClasses": ["1A","2A","3A","SL"]
+  },
+  {
+    "trainNumber": 12650,
+    "trainName": "KTK SMPRK K EXP",
+    "fromStnCode": "NZM",
+    "departureTime":"06:25",
+    "toStnCode": "JHS",
+    "arrivalTime":"12:05",
+    "duration" : "14h 35m",
+		"days":["M","T","--","T","--","S","S"],
+    "avlClasses": ["1A","2A","3A","SL"]
+  },
+  {
+    "trainNumber": 12280,
+    "trainName": "TAJ EXPRESS",
+    "fromStnCode": "NZM",
+    "departureTime":"07:00",
+    "toStnCode": "JHS",
+    "arrivalTime":"14:10",
+    "duration" : "14h 35m",
+		"days":["M","--","--","--","--","S","--"],
+    "avlClasses": ["CC","2S"]
+  }
+]

@@ -1,0 +1,33 @@
+<div *ngIf="!sidebar" class="container card mat-elevation-z4 p-0 my-2">
+  <div class="card-header py-2 bg-light text-dark font-weight-bold">
+    <div class="col-10">Enquiries</div>
+  </div>
+  <div class="row card-body p-2">
+    <div class="col-xl-4 col-lg-6 col-12 my-1 mx-0" style="overflow:hidden" *ngFor="let enq of enquiriesList; let i = index;">
+      <a [routerLink]="['/enquiries/' + enq.path]" class="card  mat-elevation-z4 py-2 px-1 bg-white text-secondary text-sm font-weight-bold cursor-pointer">
+        <span class="text-dark">
+          <span class="text-secondary px-1 font-weight-bold">{{numToChar(i+65)}}.</span> {{toTitleCase(enq.name)}}</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div *ngIf="sidebar" class="container mat-elevation-z4 p-0">
+  <div class="row mx-0 py-2 bg-primary text-white font-weight-bold">
+    <div class="col-10">Enquiries</div>
+    <div *ngIf="sidebar" class="col-2 pull-right">
+      <span class="cursor-pointer">
+        <i tabindex="0" (keydown.Enter)="hideSidebar.emit()" (click)="hideSidebar.emit()" class="material-icons vertical-align-middle">close</i>
+      </span>
+    </div>
+  </div>
+  <div *ngIf="sidebar" class="card-body p-2">
+    <div class="my-1 mx-0" style="overflow:hidden" *ngFor="let enq of enquiriesList; let i = index;">
+      <a [routerLink]="['/enquiries/' + enq.path]" class="card  mat-elevation-z4 py-2 px-1 bg-white text-secondary text-sm font-weight-bold cursor-pointer">
+        <span [ngClass]="(('/enquiries/' + enq.path)===(currPath))?'text-secondary':'text-dark'">
+          <span class="text-secondary px-1">{{numToChar(i+65)}}.</span>
+          {{toTitleCase(enq.name)}}
+        </span>
+      </a>
+    </div>
+  </div>
+</div>

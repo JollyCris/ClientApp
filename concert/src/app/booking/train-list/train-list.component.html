@@ -1,0 +1,60 @@
+<ng-container>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over" opened="false"
+                  [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
+                  [fixedBottomGap]="options.value.bottom">
+      <app-filter-train-list></app-filter-train-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content [formGroup]="options" class="bg-white">
+      <div class="container card  mat-elevation-z4 my-2 px-0">
+        <div class="row card-header px-0 bg-secondary-light text-primary mx-0 py-0">
+          <div class="container bg-light py-2">
+            <div class="row">
+              <div class="col-lg-10 col-md-8 col-12 text-primary font-weight-bold">
+                <div>
+                  NEW DELHI (NDLS)
+                  <i class="material-icons vertical-align-middle">trending_flat</i>
+                  MUMBAI CENTRAL (BCT)
+                </div>
+                <div class="mx-2 font-weight-normal">
+                  {{trainList.length}} reserved trains and {{trainList.length*2}} unreserved trains found.
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-4 col-12 pull-right mt-2 mt-md-0">
+                <button type="button" mat-raised-button color="accent" class="w-100 px-1 font-weight-bold" (click)="sidenav.toggle()">
+                  Refine Results
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12 d-none d-lg-block py-2">Train Name & No.</div>
+          <div class="row col-lg-5 col-12 text-center py-2">
+            <div class="col-4 cursor-pointer">
+              Departure<i class="material-icons vertical-align-bottom">arrow_upward</i>
+            </div>
+            <div class="col-4 cursor-pointer">
+              Arrival
+            </div>
+            <div class="col-4 cursor-pointer">
+              Duration
+            </div>
+          </div>
+          <div class="row col-lg-4 col-12 text-center py-2">
+            <div class="col-5 d-none d-lg-block">
+              Class
+            </div>
+            <div class="col-7 d-none d-lg-block">
+              Availability & Fare
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="card mat-elevation-z2 my-2 mx-1" *ngFor="let train of trainList; let i = index;">
+            <app-train [train]="train" [index]=i [selected]="selected" (trainSelected)="selected=i"></app-train>
+          </div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>

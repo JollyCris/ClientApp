@@ -1,0 +1,29 @@
+<!-- <div id="divAppRoot" [className]="theme">
+  <app-header (logOut)="logOut()"></app-header>
+  <div id="divMain" #focusSetter tabIndex="0" class="py-2" style="min-height:calc(100vh - 5rem)">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div> -->
+<div id="divAppRoot" [className]="theme">
+
+<ng-container>
+  <mat-sidenav-container class="bg-white">
+    <mat-sidenav-content [formGroup]="options">
+        <app-header id="appHeader" (logOut)="logOut()" [sideBarVisible]="sidenavMain.opened" (showSideBar)="sidenavMain.toggle()"></app-header>
+        <div id="divMain" #focusSetter tabIndex="0" class="py-2">
+          <router-outlet></router-outlet>
+        </div>
+        <app-footer id="appFooter"></app-footer>
+        <!-- <button mat-flat-button color="primary" (click)="sidenavMain.toggle()" class="px-3 text-lg font-weight-bold" style="position: fixed; top:200px; right:-26px; transform: rotate(-90deg);">
+          Help
+        </button> -->
+    </mat-sidenav-content>
+    <mat-sidenav id="sideNavMain" #sidenavMain mode="side" position="end" class="mat-elevation-z8"
+                  [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top" opened="false"
+                  [fixedBottomGap]="options.value.bottom">
+      <app-sidebar-main (toggleSidenavMain)="sidenavMain.toggle()" (logOut)="logOut()"></app-sidebar-main>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</ng-container>
+</div>

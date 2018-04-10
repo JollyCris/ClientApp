@@ -1,0 +1,28 @@
+<div class="table-responsive text-muted">
+  <table class="table table-sm text-primary">
+    <tbody>
+      <tr>
+        <th scope="row">Base Fare</th>
+        <td>{{2487 | currency: 'INR'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Reservation Charge</th>
+        <td>{{60 | currency: 'INR'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Total GST</th>
+        <td>{{128 | currency: 'INR'}}</td>
+      </tr>
+      <tr class="bg-secondary text-white">
+        <th scope="row">Total Fare</th>
+        <td>{{2675 | currency: 'INR'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-xs">
+    * IR recovers only 57% of cost of travel on an average.
+  </div>
+  <div class="text-xs">
+    * Rounding off  to next multiple of Rs. 5 is included in Base fare.
+  </div>
+</div>

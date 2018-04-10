@@ -1,0 +1,178 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/material-icon.css';
+@import './assets/styles/bootstrap.min.css';
+@import './assets/styles/custom-theme';
+
+/* ------ vertical align CSS begins ------- */
+.vertical-align-bottom {
+  vertical-align: bottom;
+}
+
+.vertical-align-middle {
+  vertical-align: middle;
+}
+
+/* ------ vertical align CSS ends ------- */
+
+/* ------- onFocus Outline CSS begins -----------  */
+a:hover {
+  text-decoration: none;
+}
+/* ------- onFocus Outline CSS ends -----------  */
+
+/* ------------- font size CSS begins ---------------- */
+html {
+  font-size: 1rem;
+}
+
+@media (min-width: 1700px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 300px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+.text-xxxl {
+  font-size: 1.4rem;
+}
+.text-xxl {
+  font-size: 1.3rem;
+}
+
+.text-xl {
+  font-size: 1.2rem;
+}
+
+.text-lg {
+  font-size: 1.1rem;
+}
+
+.text-md {
+  font-size: 1rem;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
+.text-xs {
+  font-size: 0.8rem;
+}
+
+.text-xxs {
+  font-size: 0.7rem;
+}
+
+.text-xxxs {
+  font-size: 0.6rem;
+}
+/* ------------- font size CSS ends ---------------- */
+
+/* ----------------pointer CSS begins--------------------- */
+.cursor-pointer {
+  cursor: pointer;
+}
+/* ----------------pointer CSS ends--------------------- */
+
+// ---------------- border width CSS begins -------------- //
+.border-1  {
+  border-width: 1px !important;
+}
+
+.border-2  {
+  border-width: 2px !important;
+}
+
+.border-3  {
+  border-width: 3px !important;
+}
+
+.border-4  {
+  border-width: 4px !important;
+}
+
+.border-5  {
+  border-width: 5px !important;
+}
+
+.border-6  {
+  border-width: 6px !important;
+}
+// ---------------- border width CSS ends -------------- //
+
+
+// ----------------- scrollbar style begins -------------//
+::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(20, 87, 167, 0);
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb {
+  background-color: #c9c9c9;
+  border-radius: 25px;
+} /* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+  background-color: rgba(20, 87, 167, 0);
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+  background-color: rgba(20, 87, 167, 0);
+}
+// ----------------- scrollbar style ends -------------//
+
+// ----------------- mat-expansion-panel CSS begins -------------//
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+::ng-deep .mat-expansion-panel-header {
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+::ng-deep .mat-expansion-panel-header:focus {
+  background: rgba(0, 0, 0, 0.08) !important;
+}
+// ----------------- mat-expansion-panel CSS ends -------------//
+
+// ----------------- mat overlay-backdrop ----------------//
+.cdk-overlay-backdrop {
+  z-index: 1000;
+}
+.sticky-top {
+  z-index: 1000;
+}
+// ----------------- mat overlay-backdrop ----------------//
+
+
+.mat-horizontal-content-container {
+  padding: 0px !important;
+}

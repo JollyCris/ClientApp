@@ -1,0 +1,26 @@
+<div class="mt-5">
+</div>
+<footer id="divFooter" class="fixed-bottom">
+  <button  mat-flat-button color="primary" (click)="showNotification=!showNotification">
+      NOTIFICATIONS
+      <span class="badge badge-danger">3</span>
+  </button>
+  <div id="divNotifications" class="bg-light text-dark p-2" *ngIf="showNotification">
+      <span>
+        Special Train 01234 introduced from NDLS to JAT
+      </span><br>
+      <span>
+        Time-table printing disabled due to time-table changes in progress
+      </span><br>
+      <span class="pull-right"><a href="#">More...</a></span>
+  </div>
+  <div class="text-light bg-dark text-center text-sm">
+    <span>
+        Copyright © 2017 -
+        <a class="text-light" target="_blank" href="http://www.cris.org.in">www.cris.org.in</a>
+    </span>
+    <!-- <span class="pull-right">
+      <a target="_blank" href="http://contents.irctc.co.in/en/BetaSiteCompatibleBrowser.html" style="cursor:pointer">Compatible Browsers</a>
+    </span> -->
+  </div>
+</footer>

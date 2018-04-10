@@ -1,0 +1,53 @@
+<nav id="divHeader" class="navbar navbar-expand-lg navbar-dark bg-dark text-light fixed-top mat-elevation-z2 py-1">
+  <button [routerLink]="['']" mat-button class="col-6 col-lg-2 text-left text-xxxl font-weight-bold text-white">NxtGenPRS</button>
+
+  <ul class="d-none d-lg-block mx-auto my-0">
+    <button [routerLink]="['booking']" mat-button class="text-lg font-weight-bold">Booking</button>
+    <button [routerLink]="['cancellation']" mat-button class="text-lg font-weight-bold">Cancellation</button>
+    <button [routerLink]="['modification']" mat-button class="text-lg font-weight-bold">Modification</button>
+    <button [routerLink]="['enquiries']" mat-button class="text-lg font-weight-bold">Enquiries</button>
+  </ul>
+  <ul class="text-right my-0">
+    <button mat-icon-button [matMenuTriggerFor]="menuFormatColorFill">
+      <mat-icon>format_color_fill</mat-icon>
+    </button>
+    <mat-menu #menuFormatColorFill="matMenu">
+      <button mat-mini-fab class="m-1" (click)="setTheme('theme-purple')" style="background-color:#303f9f">
+        <i *ngIf="themeIn==='theme-purple'" class="material-icons">done</i>
+      </button>
+      <button mat-mini-fab class="m-1" (click)="setTheme('theme-blue-grey')" style="background-color:#607D8B">
+        <i *ngIf="themeIn==='theme-blue-grey'" class="material-icons">done</i>
+      </button>
+      <button mat-mini-fab class="m-1" (click)="setTheme('theme-teal')" style="background-color:#009688">
+        <i *ngIf="themeIn==='theme-teal'" class="material-icons">done</i>
+      </button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="menuFormatSize">
+      <mat-icon>format_size</mat-icon>
+    </button>
+    <mat-menu #menuFormatSize="matMenu">
+      <button mat-mini-fab class="m-1" (click)="zoom(-1)">
+        A
+        <sup>-</sup>
+      </button>
+      <button mat-mini-fab class="m-1" (click)="zoom(0)">
+        A
+      </button>
+      <button mat-mini-fab class="m-1" (click)="zoom(+1)">
+        A
+        <sup>+</sup>
+      </button>
+    </mat-menu>
+    <button *ngIf="!sideBarVisible" (click)="showSideBar.emit()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+  </ul>
+  <ul class="col-12 d-lg-none mx-auto my-0">
+    <button [routerLink]="['booking']" mat-button class="text-lg font-weight-bold">Booking</button>
+    <button [routerLink]="['cancellation']" mat-button class="text-lg font-weight-bold">Cancellation</button>
+    <button [routerLink]="['modification']" mat-button class="text-lg font-weight-bold">Modification</button>
+    <button [routerLink]="['enquiries']" mat-button class="text-lg font-weight-bold">Enquiries</button>
+  </ul>
+</nav>
+<div class="mb-5">
+</div>

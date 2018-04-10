@@ -1,0 +1,280 @@
+<button class="text-primary bg-light px-1 my-3 position-fixed d-none d-xl-block" (click)="print()" mat-icon-button>
+  <mat-icon>print</mat-icon>
+</button>
+<div class="container card  mat-elevation-z4 px-0">
+  <div class="card-header py-2 bg-light text-dark font-weight-bold">
+    <span>DTC Transaction Details</span>
+  </div>
+  <div class="card-body px-2 py-0">
+    <!-- <div tabindex="0" class="card  mat-elevation-z4 text-sm my-3" [class.mat-elevation-z0]="activeCard!=='headCard'" [class.mat-elevation-z18]="activeCard==='headCard'"
+      (click2)="activeCard='headCard'">
+      <div class="card-header py-1 bg-light ">User Details</div>
+      <div class="card-body">
+        <div class="col-sm-3 float-left border border-secondary">BKG DATE:12:12:2017</div>
+        <div class="col-sm-3 float-left border border-secondary">TIME:10: 50: 27</div>
+        <div class="col-sm-3 float-left border border-secondary">PRS_ID: D</div>
+        <div class="col-sm-3 float-left border border-secondary">LOC_ID: NDLS</div>
+        <div class="col-sm-3 float-left border border-secondary">TRML_NO: 8</div>
+        <div class="col-sm-3 float-left border border-secondary">WND_NO: 112</div>
+        <div class="col-sm-3 float-left border border-secondary">SHIFT_NO: 1</div>
+        <div class="col-sm-3 float-left border border-secondary">OPER_NO: 1</div>
+        <div class="col-sm-3 float-left border border-secondary">OPER_ID: ANKITP</div>
+      </div>
+    </div> -->
+
+    <div tabindex="0" class="card  mat-elevation-z4 text-sm border-secondary my-3" [class.mat-elevation-z0]="activeCard!=='totalsCard'" [class.mat-elevation-z18]="activeCard==='totalsCard'"
+      (click2)="activeCard='totalsCard'">
+      <div class="card-header py-1 bg-secondary-light text-secondary">TOTALS </div>
+      <div class="card-body text-secondary py-1">
+        <ul class="list-group list-group-flush px-0">
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-secondary text-white py-1">RECEIVED</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">CASH: 10660</div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">CARD: 0</div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">DIGI: 0</div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">RTC: 0</div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">VCH: 0</div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-secondary text-white py-1">REFUND</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">CASH: 7480</div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">CARD: 0</div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">DIGI: 0</div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">RTC: 0</div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">VCH: 0</div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-12 float-left bg-secondary-light text-secondary py-1">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-sm-6 float-left">CAN FEE: 3180</div>
+            <div class="col-sm-6 float-left">CLERKAGE: 0</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div tabindex="0" class="card  mat-elevation-z4 text-sm border-primary my-3" [class.mat-elevation-z0]="activeCard!=='tktCard001'" [class.mat-elevation-z18]="activeCard==='tktCard001'"
+      (click2)="activeCard='tktCard001'">
+      <div class="card-header py-1 bg-light ">
+        <!-- <div class="col-sm-3 float-left">SLP: 1</div> -->
+        <div class="col-sm-3 float-left">PNR: 2550355806</div>
+      </div>
+      <div class="card-body text-primary py-1">
+        <ul class="col-sm-12 list-group list-group-flush px-0">
+          <li class="list-group-item">
+            <div class="col-sm-3 float-left">TRAIN NO: 12560</div>
+            <div class="col-sm-3 float-left">CLASS: 1A</div>
+            <div class="col-sm-3 float-left">JRNY_DATE: 12-12</div>
+            <div class="col-sm-3 float-left">NDLS-MUV</div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">RECEIVED</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">CASH: 10660</div>
+              <div class="col-md-3 float-left">RTC: 0</div>
+              <div class="col-md-3 float-left">VCH: 0</div>
+              <div class="col-md-3 float-left">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">REFUNDS</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">CASH: 7480</div>
+              <div class="col-md-3 float-left">RTC: 0</div>
+              <div class="col-md-3 float-left">VCH: 0</div>
+              <div class="col-md-3 float-left">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">FARE BREAKUP</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">BASE FARE: 7480</div>
+              <div class="col-md-3 float-left">RES FEE: 0</div>
+              <div class="col-md-3 float-left">SF CH: 0</div>
+              <div class="col-md-3 float-left">OTHER CHARGE: 0</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div tabindex="0" class="card  mat-elevation-z4 text-sm border-primary my-3" [class.mat-elevation-z0]="activeCard!=='tktCard002'" [class.mat-elevation-z18]="activeCard==='tktCard002'"
+      (click2)="activeCard='tktCard002'">
+      <div class="card-header py-1 bg-light ">
+        <!-- <div class="col-sm-3 float-left">SLP: 1</div> -->
+        <div class="col-sm-3 float-left">PNR: 2550355806</div>
+      </div>
+      <div class="card-body text-primary py-1">
+        <ul class="col-sm-12 list-group list-group-flush px-0">
+          <li class="list-group-item">
+            <div class="col-sm-3 float-left">TRAIN NO: 12560</div>
+            <div class="col-sm-3 float-left">CLASS: 1A</div>
+            <div class="col-sm-3 float-left">JRNY_DATE: 12-12</div>
+            <div class="col-sm-3 float-left">NDLS-MUV</div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">RECEIVED</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">CASH: 10660</div>
+              <div class="col-md-3 float-left">RTC: 0</div>
+              <div class="col-md-3 float-left">VCH: 0</div>
+              <div class="col-md-3 float-left">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">REFUNDS</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">CASH: 7480</div>
+              <div class="col-md-3 float-left">RTC: 0</div>
+              <div class="col-md-3 float-left">VCH: 0</div>
+              <div class="col-md-3 float-left">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">FARE BREAKUP</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">BASE FARE: 7480</div>
+              <div class="col-md-3 float-left">RES FEE: 0</div>
+              <div class="col-md-3 float-left">SF CH: 0</div>
+              <div class="col-md-3 float-left">OTHER CHARGE: 0</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div tabindex="0" class="card  mat-elevation-z4 text-sm border-primary my-3" [class.mat-elevation-z0]="activeCard!=='tktCard003'" [class.mat-elevation-z18]="activeCard==='tktCard003'"
+      (click2)="activeCard='tktCard003'">
+      <div class="card-header py-1 bg-light ">
+        <!-- <div class="col-sm-3 float-left">SLP: 1</div> -->
+        <div class="col-sm-3 float-left">PNR: 2550355806</div>
+      </div>
+      <div class="card-body text-primary py-1">
+        <ul class="col-sm-12 list-group list-group-flush px-0">
+          <li class="list-group-item">
+            <div class="col-sm-3 float-left">TRAIN NO: 12560</div>
+            <div class="col-sm-3 float-left">CLASS: 1A</div>
+            <div class="col-sm-3 float-left">JRNY_DATE: 12-12</div>
+            <div class="col-sm-3 float-left">NDLS-MUV</div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">RECEIVED</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">CASH: 10660</div>
+              <div class="col-md-3 float-left">RTC: 0</div>
+              <div class="col-md-3 float-left">VCH: 0</div>
+              <div class="col-md-3 float-left">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">REFUNDS</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">CASH: 7480</div>
+              <div class="col-md-3 float-left">RTC: 0</div>
+              <div class="col-md-3 float-left">VCH: 0</div>
+              <div class="col-md-3 float-left">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">FARE BREAKUP</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">BASE FARE: 7480</div>
+              <div class="col-md-3 float-left">RES FEE: 0</div>
+              <div class="col-md-3 float-left">SF CH: 0</div>
+              <div class="col-md-3 float-left">OTHER CHARGE: 0</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div tabindex="0" class="card  mat-elevation-z4 text-sm border-primary my-3" [class.mat-elevation-z0]="activeCard!=='tktCard004'" [class.mat-elevation-z18]="activeCard==='tktCard004'"
+      (click2)="activeCard='tktCard004'">
+      <div class="card-header py-1 bg-light ">
+        <!-- <div class="col-sm-3 float-left">SLP: 1</div> -->
+        <div class="col-sm-3 float-left">PNR: 2550355806</div>
+      </div>
+      <div class="card-body text-primary py-1">
+        <ul class="col-sm-12 list-group list-group-flush px-0">
+          <li class="list-group-item">
+            <div class="col-sm-3 float-left">TRAIN NO: 12560</div>
+            <div class="col-sm-3 float-left">CLASS: 1A</div>
+            <div class="col-sm-3 float-left">JRNY_DATE: 12-12</div>
+            <div class="col-sm-3 float-left">NDLS-MUV</div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">RECEIVED</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">CASH: 10660</div>
+              <div class="col-md-3 float-left">RTC: 0</div>
+              <div class="col-md-3 float-left">VCH: 0</div>
+              <div class="col-md-3 float-left">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">REFUNDS</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">CASH: 7480</div>
+              <div class="col-md-3 float-left">RTC: 0</div>
+              <div class="col-md-3 float-left">VCH: 0</div>
+              <div class="col-md-3 float-left">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">FARE BREAKUP</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">BASE FARE: 7480</div>
+              <div class="col-md-3 float-left">RES FEE: 0</div>
+              <div class="col-md-3 float-left">SF CH: 0</div>
+              <div class="col-md-3 float-left">OTHER CHARGE: 0</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div tabindex="0" class="card  mat-elevation-z4 text-sm border-primary my-3" [class.mat-elevation-z0]="activeCard!=='tktCard005'" [class.mat-elevation-z18]="activeCard==='tktCard005'"
+      (click2)="activeCard='tktCard005'">
+      <div class="card-header py-1 bg-light ">
+        <!-- <div class="col-sm-3 float-left">SLP: 1</div> -->
+        <div class="col-sm-3 float-left">PNR: 2550355806</div>
+      </div>
+      <div class="card-body text-primary py-1">
+        <ul class="col-sm-12 list-group list-group-flush px-0">
+          <li class="list-group-item">
+            <div class="col-sm-3 float-left">TRAIN NO: 12560</div>
+            <div class="col-sm-3 float-left">CLASS: 1A</div>
+            <div class="col-sm-3 float-left">JRNY_DATE: 12-12</div>
+            <div class="col-sm-3 float-left">NDLS-MUV</div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">RECEIVED</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">CASH: 10660</div>
+              <div class="col-md-3 float-left">RTC: 0</div>
+              <div class="col-md-3 float-left">VCH: 0</div>
+              <div class="col-md-3 float-left">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">REFUNDS</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">CASH: 7480</div>
+              <div class="col-md-3 float-left">RTC: 0</div>
+              <div class="col-md-3 float-left">VCH: 0</div>
+              <div class="col-md-3 float-left">GST: 0</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="col-md-2 col-12 float-left bg-primary text-white">FARE BREAKUP</div>
+            <div class="col-md-10 col-12 float-left">
+              <div class="col-md-3 float-left">BASE FARE: 7480</div>
+              <div class="col-md-3 float-left">RES FEE: 0</div>
+              <div class="col-md-3 float-left">SF CH: 0</div>
+              <div class="col-md-3 float-left">OTHER CHARGE: 0</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

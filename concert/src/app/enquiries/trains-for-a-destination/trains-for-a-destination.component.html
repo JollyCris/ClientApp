@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="card  mat-elevation-z4 my-2">
+    <div class="card-header py-2 bg-light text-dark font-weight-bold">
+      <span>
+        All Trains for a Source Destination Pair
+      </span>
+    </div>
+    <form [formGroup]="accomodationAvailabilityForm" class="card-body pt-2 pb-0 text-sm" (submit)="fetchAccomodationAvailability()">
+      <div class="row">
+        <mat-form-field class="col-lg-3 col-md-6 col-12 mx-0">
+          <input type="text" placeholder="Origin" aria-label="Number" matInput [formControl]="origin" [matAutocomplete]="autoOrigin"
+          (blur)="selectOrigin()">
+          <mat-autocomplete #autoOrigin="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOriginOptions | async" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field class="col-lg-3 col-md-6 col-12 mx-0">
+          <input type="text" placeholder="Destination" aria-label="Number" matInput [formControl]="destin" [matAutocomplete]="autoDestin"
+          (blur)="selectDestin()">
+          <mat-autocomplete #autoDestin="matAutocomplete">
+            <mat-option *ngFor="let option of filteredDestinOptions | async" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <div class="col-md-3 col-sm-6 col-12 px-3 mb-3">
+          <button *ngIf="!accomodationAvailabilityFetched" mat-raised-button color="primary" class="w-100 font-weight-bold" type="submit">Fetch Trains</button>
+          <button *ngIf="accomodationAvailabilityFetched" mat-raised-button color="primary" class="w-100 font-weight-bold" (click)="accomodationAvailabilityFetched=false">Reset</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div *ngIf="accomodationAvailabilityFetched" class="card  mat-elevation-z4 table-responsive text-sm my-3 text-center">
+    <table class="table table-bordered my-0">
+      <thead class="text-dark bg-light">
+        <tr>
+          <th scope="col">#</th>
+          <td scope="col">Train No.</td>
+          <td scope="col">Train Name</td>
+          <td scope="col">Source</td>
+          <td scope="col">Departure</td>
+          <td scope="col">Destination</td>
+          <td scope="col">Arrival</td>
+          <td scope="col">Days Running</td>
+        </tr>
+      </thead>
+      <tbody class="text-dark">
+        <tr *ngFor="let avl of fetchedAccomodationAvailability; let i = index;">
+          <td scope="row" class="text-primary">{{i + 1 | number: '2.0-0'}}</td>
+          <td>{{avl.train_no}}</td>
+          <td>{{avl.train_name}}</td>
+          <td>{{avl.src}}</td>
+          <td>{{avl.dep}}</td>
+          <td>{{avl.dest}}</td>
+          <td>{{avl.arr}}</td>
+          <td>
+            <span [ngClass]="{'text-success': (avl.days_running.sun), 'text-danger': (!avl.days_running.sun)}">S</span>
+            <span [ngClass]="{'text-success': (avl.days_running.mon), 'text-danger': (!avl.days_running.mon)}">M</span>
+            <span [ngClass]="{'text-success': (avl.days_running.tue), 'text-danger': (!avl.days_running.tue)}">T</span>
+            <span [ngClass]="{'text-success': (avl.days_running.wed), 'text-danger': (!avl.days_running.wed)}">W</span>
+            <span [ngClass]="{'text-success': (avl.days_running.thu), 'text-danger': (!avl.days_running.thu)}">T</span>
+            <span [ngClass]="{'text-success': (avl.days_running.fri), 'text-danger': (!avl.days_running.fri)}">F</span>
+            <span [ngClass]="{'text-success': (avl.days_running.sat), 'text-danger': (!avl.days_running.sat)}">S</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+<div class="card" (click)="trainSelected.emit(index)" (focus)="trainSelected.emit(index)">
+  <div class="card-body text-primary px-2 pr-md-0 py-2">
+    <div class="row">
+      <div class="col-lg-3 col-12 text-md">
+        <div class="font-weight-bold text-lg">
+          <span class="material-icons vertical-align-middle">train</span>
+          <!-- <span>{{train.trainName}}({{train.trainNumber}})</span> -->
+          <button mat-button color="primary" (click)="showTimeTable()" class="font-weight-bold">{{train.trainName}}({{train.trainNumber}})</button>
+        </div>
+      </div>
+      <!-- <div class="d-lg-none col-4">
+        <div class="text-primary w-100">
+          <button *ngIf="!panelOpenState" mat-raised-button color="primary" class="border rounded bg-light w-100 text-sm px-0" (click)="panelOpenState = true">Check Availability</button>
+          <button *ngIf="panelOpenState" mat-raised-button color="primary" class="border rounded bg-light w-100" (click)="panelOpenState = true">
+            <i class="material-icons">loop</i>
+          </button>
+        </div>
+      </div> -->
+      <div class="row col-lg-5 col-12 text-center text-md">
+        <div class="col-4">
+          <div>
+            {{train.departureTime}}
+          </div>
+          <div class="text-xs text-primary">
+            {{train.fromStnCode}}
+          </div>
+        </div>
+        <div class="col-4">
+          <div>
+            {{train.arrivalTime}}
+          </div>
+          <div class="text-xs text-primary">
+            {{train.toStnCode}}
+          </div>
+        </div>
+        <div class="col-4">
+          <div>
+            {{train.duration}}
+          </div>
+          <div class="text-xs text-primary">
+            Avg. Delay: 30m
+          </div>
+        </div>
+      </div>
+      <div class="row col-lg-4 col-12 py-2 py-lg-0 text-center">
+        <div class="col-5">
+          <mat-form-field class="w-100">
+            <mat-select placeholder="Class" required>
+              <!-- <mat-option value="">All Class</mat-option> -->
+              <mat-option value="1A">AC 1 Tier</mat-option>
+              <mat-option value="2A">AC 2 Tier</mat-option>
+              <mat-option value="3A">AC 3 Tier</mat-option>
+              <mat-option value="3E">AC 3 Economy</mat-option>
+              <mat-option value="CC">AC Chair Car</mat-option>
+              <mat-option value="1A">Sleeper</mat-option>
+            </mat-select>
+            <!-- <mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>
+            <mat-hint>{{animalControl.value?.sound}}</mat-hint> -->
+          </mat-form-field>
+        </div>
+        <div class="col-7 my-1">
+          <button *ngIf="!panelOpenState" mat-raised-button color="primary" class="d-none d-xl-block font-weight-bold" (click)="panelOpenState = true">Check Availability & Fare</button>
+          <button *ngIf="!panelOpenState" mat-raised-button color="primary" class="d-xl-none text-xs" (click)="panelOpenState = true">Check Availability & Fare</button>
+          <div *ngIf="panelOpenState" class="row bg-light">
+            <!-- <span class="col-7"> -->
+            <span class="px-1">
+                <!-- <i class="material-icons vertical-align-middle text-secondary cursor-pointer" tabindex="0"
+                  (keydown.Enter)="showFareDetails()" (click)="showFareDetails()">info</i> -->
+                <button class="text-secondary" (click)="showFareDetails()" mat-icon-button>
+                  <mat-icon>info</mat-icon>
+                </button>
+              <span class="text-dark font-weight-bold">{{1298 | currency: 'INR'}}</span>
+              <button class="text-secondary" (click)="false" mat-icon-button>
+                <mat-icon>loop</mat-icon>
+              </button>
+            </span>
+            <!-- <button *ngIf="panelOpenState" mat-raised-button color="primary" class="col-4 rounded" (click)="panelOpenState = true">
+              <i class="material-icons">loop</i>
+            </button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <mat-accordion>
+    <mat-expansion-panel [disabled]="!panelOpenState" [hideToggle]="!panelOpenState" class="mat-elevation-z0 p-0" [expanded]="panelOpenState" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header class="h-50 px-2 py-1">
+        <div class="col-12 text-primary text-sm">
+          Runs On: Tue, Thu, Fri & Sun
+        </div>
+        <div class="col-md-3 col-12 pull-right px-1 text-secondary" style="text-align: right;">
+        </div>
+      </mat-expansion-panel-header>
+      <div class="table-responsive">
+        <table class="table table-bordered text-center m-0">
+          <thead class="text-dark bg-light">
+            <tr>
+              <td scope="col" class="py-1">{{todayDate | date: 'dd-MM-yyyy'}}</td>
+              <td scope="col" class="py-1">{{todayDate + 1 | date: 'dd-MM-yyyy'}}</td>
+              <td scope="col" class="py-1">{{todayDate | date: 'dd-MM-yyyy'}}</td>
+              <td scope="col" class="py-1">{{todayDate | date: 'dd-MM-yyyy'}}</td>
+              <td scope="col" class="py-1">{{todayDate | date: 'dd-MM-yyyy'}}</td>
+              <td scope="col" class="py-1">{{todayDate | date: 'dd-MM-yyyy'}}</td>
+            </tr>
+          </thead>
+          <tbody class="text-dark">
+            <tr>
+              <td scope="row" class="text-secondary py-1">
+                <div class="py-1">PQWL26/WL25 ( 58% )</div>
+                <button  mat-raised-button color="accent" class="my-1 font-weight-bold">Book</button>
+              </td>
+              <td scope="row" class="text-primary py-1">
+                <div class="py-1">AVAILABLE 20</div>
+                <button  mat-raised-button color="primary"  class="my-1 font-weight-bold">Book</button>
+              </td>
+              <td scope="row" class="text-secondary py-1">
+                <div class="py-1">WL75 ( 28% )</div>
+                <button  mat-raised-button color="accent" class="my-1 font-weight-bold">Book</button>
+              </td>
+              <td scope="row" class="text-info py-1">
+                <div class="py-1">RAC 19 </div>
+                <button  mat-raised-button  class="my-1 font-weight-bold bg-info" >Book</button>
+              </td>
+              <td scope="row" class="text-primary py-1">
+                <div class="py-1">AVAILABLE 20</div>
+                <button  mat-raised-button color="primary"  class="my-1 font-weight-bold">Book</button>
+              </td>
+              <td scope="row" class="text-danger py-1">
+                <div class="py-1">REGRET</div>
+                <button  mat-raised-button color="danger" class="my-1 font-weight-bold" disabled>Book</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<!-- text-white bg-primary text-lg font-weight-bold -->

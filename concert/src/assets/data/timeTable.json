@@ -1,0 +1,56 @@
+{
+  "serverId": "Server-0",
+  "stationFrom": "NEW DELHI",
+  "stationList": [{
+    "arrivalTime": "--",
+    "dayCount": "1",
+    "departureTime": "18:55",
+    "distance": "0",
+    "haltTime": "--",
+    "routeNumber": "1",
+    "stationCode": "NDLS",
+    "stationName": "NEW DELHI",
+    "stnSerialNumber": "1"
+  }, {
+    "arrivalTime": "01:00",
+    "dayCount": "2",
+    "departureTime": "01:05",
+    "distance": "440",
+    "haltTime": "05:00",
+    "routeNumber": "1",
+    "stationCode": "CNB",
+    "stationName": "KANPUR CENTRAL",
+    "stnSerialNumber": "3"
+  }, {
+    "arrivalTime": "03:45",
+    "dayCount": "2",
+    "departureTime": "04:10",
+    "distance": "634",
+    "haltTime": "25:00",
+    "routeNumber": "1",
+    "stationCode": "ALD",
+    "stationName": "ALLAHABAD JN",
+    "stnSerialNumber": "4"
+  }, {
+    "arrivalTime": "07:00",
+    "dayCount": "2",
+    "departureTime": "--",
+    "distance": "755",
+    "haltTime": "--",
+    "routeNumber": "1",
+    "stationCode": "MUV",
+    "stationName": "MANDUADIH",
+    "stnSerialNumber": "5"
+  }],
+  "stationTo": "MANDUADIH",
+  "timeStamp": "2017-11-30T16:54:37.01",
+  "trainName": "SHIV GANGA EXP",
+  "trainNumber": "12560",
+  "trainRunsOnFri": "Y",
+  "trainRunsOnMon": "Y",
+  "trainRunsOnSat": "Y",
+  "trainRunsOnSun": "Y",
+  "trainRunsOnThu": "Y",
+  "trainRunsOnTue": "Y",
+  "trainRunsOnWed": "Y"
+}

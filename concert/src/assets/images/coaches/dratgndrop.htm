@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {width:200px;height:200px;padding:10px;border:1px solid #aaaaaa;}
+#div2 {width:200px;height:200px;padding:10px;border:1px solid #aaaaaa;}
+#div3 {width:200px;height:200px;padding:10px;border:1px solid #aaaaaa;}
+#div4 {width:200px;height:200px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+
+<br>
+<img id="engg" src="eng.jpg" draggable="false" width="40" height="40" >
+<img id="drag1" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40" >
+<img id="drag2" src="coach.jpg" draggable="true" ondragstart="drag(event)"width="40" height="40" >
+<img id="drag3" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+<img id="drag4" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+<img id="drag5" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+<img id="drag6" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+<img id="drag7" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+<img id="drag8" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+<img id="drag9" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+<img id="drag10" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+<img id="drag11" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+<img id="drag12" src="coach.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+<br>
+
+<table> 
+<tr><td>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">TTE1</div>
+</td><td>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">TTE2</div>
+</td></tr>
+<tr><td>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">TTE3</div>
+</td><td>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">TTE4</div>
+</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<ng-container>
+  <mat-sidenav-container class="bg-white">
+    <mat-sidenav-content [formGroup]="options">
+      <button *ngIf="showSidebar && (showSidebarPref===false)" class="text-primary bg-light px-1 my-2 position-fixed d-none d-xl-block" (click)="showSidebarPref=true" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    <mat-sidenav #sidenav mode="side" [(opened)]="showSidebar && showSidebarPref" class="d-none d-xl-block mat-elevation-z8"
+                 [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
+                 [fixedBottomGap]="options.value.bottom">
+      <app-enquiries-menu [sidebar]=true (hideSidebar)="showSidebarPref=false"></app-enquiries-menu>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</ng-container>
